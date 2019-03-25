@@ -34,12 +34,23 @@ jQuery(document).ready(function($) {
 	$('.owl-carousel-1').owlCarousel({
 	    loop:true,
 	    margin:0,
-	    nav:true,
-	    dots: false,
+	    nav:false,
+	    dots: true,
 	    items:4
 	});
 
-	$('.owl-carousel-1 .owl-nav').addClass('container');
+	$('.owl-carousel-1 .owl-dots').addClass('container');
+
+
+	$('.owl-carousel-2').owlCarousel({
+	    loop:true,
+	    margin:0,
+	    nav:false,
+	    dots: true,
+	    items:4
+	});
+
+	$('.owl-carousel-2 .owl-dots').addClass('container');
 
 
 });
