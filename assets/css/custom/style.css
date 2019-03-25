@@ -202,13 +202,13 @@ header{
 	overflow: hidden;
 	position: relative;
 }
-.main-owl-carousel .item{
+.owl-carousel-main .item{
 	position: relative;
 }
-.main-owl-carousel .item .image{
+.owl-carousel-main .item .image{
 	padding-top: 42%;
 }
-.main-owl-carousel .item .img-blur{
+.owl-carousel-main .item .img-blur{
 	position: absolute;
 	top: 0;
 	left: 0;
