@@ -1,0 +1,382 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: #f6f6f6;
+}
+.d-color{
+	color: #e2aa4f;
+}
+.d-color-bg{
+	background: #e2aa4f;
+}
+@font-face {
+  font-family: open-sans-regular;
+  src: url(../../fonts/OpenSans_Regular.woff);
+}
+@font-face {
+  font-family: open-sans-semibold;
+  src: url(../../fonts/OpenSans_SemiBold.woff);
+}
+@font-face {
+  font-family: pantomtavruli;
+  src: url(../../fonts/pantonmtav3-bold.woff);
+}
+.f-open-r{
+	font-family: open-sans-regular;
+}
+.f-open-sm{
+	font-family: open-sans-semibold;
+}
+.f-pant{
+	font-family: pantomtavruli;
+}
+.f-12{
+	font-size: 12px;
+}
+.color-darkgray{
+	color: #464646;
+}
+.mg-left-15{
+	margin-left: 15px;
+}
+.pos-rel{
+	position: relative;
+}
+.btn-regular{
+	background: #e2aa4f;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	display: inline-block;
+	color: white;
+	font-family: open-sans-regular;
+	padding: 8px 36px;
+	font-size: 14px;
+}
+.btn-regular:hover{
+	text-decoration: none;
+	color: white;
+	background: #bf8933;
+	transition: 0.3s;
+}
+.main-line{
+
+}
+.main-line img{
+	width: 100%;
+}
+
+/*   HEADER START   */
+header{
+	height: 100px;
+	background: #fff;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
+	-moz-box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
+	box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
+	z-index: 111;
+}
+#logo{
+	height: 90px;
+	margin-top: 5px;
+}
+.i-envelope{
+	width: 13px;
+}
+.i-reciver{
+	width: 13px;
+}
+.header-top-content{
+	height: 40px;
+}
+.header-top-content>div{
+	height: 40px;
+	line-height: 40px;
+}
+.header-menu{
+	height: 60px;
+}
+.header-menu-col{
+	z-index: 1;
+}
+.menu-bg{
+	position: absolute;
+    height: 60px;
+    bottom: 0;
+    right: 0px;
+    width: 70%;
+    z-index: 0;
+    border-top-left-radius: 60px;
+}
+.header-socials,
+.header-langs{
+	display: inline-block;
+    float: right;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header-socials>div{
+	height: 60px;
+	line-height: 52px;
+}
+.header-socials>div a{
+	display: inline-block;
+}
+.header-langs{
+	position: relative;
+}
+.header-langs:after{
+	content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 1px;
+}
+.header-langs:before{
+	content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 1px;
+}
+.header-langs>div{
+	height: 60px;
+	line-height: 60px;
+}
+.lang a{
+	color: #fff;
+	font-size: 14px;
+}
+.menu ul li {
+	float: left;
+	list-style-type: none;
+	margin-right: 25px;
+}
+.menu{
+	float: right;
+}
+.menu ul{
+	height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    float: right;
+}
+.menu ul li a {
+	font-family: pantomtavruli;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+}
+.sub-menu{
+	position: relative;
+	margin-right: 30px;
+}
+.sub-menu:after{
+	content: '';
+    background: url(../../img/right-arrow.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: -6px;
+    top: 43%;
+    width: 6px;
+    height: 8px;
+    transform: translateY(-50%);
+    -webkit-transform: rotate(90deg) translateY(-90%);
+    -moz-transform: rotate(90deg) translateY(-90%);
+    -ms-transform: rotate(90deg) translateY(-90%);
+    -o-transform: rotate(90deg) translateY(-90%);
+    transform: rotate(90deg) translateY(-90%);
+}
+
+
+
+/*   SLIDER START   */
+.slider-container{
+	overflow: hidden;
+	position: relative;
+}
+.main-owl-carousel .item{
+	position: relative;
+}
+.main-owl-carousel .item .image{
+	padding-top: 42%;
+}
+.main-owl-carousel .item .img-blur{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(24, 24, 24, 0.12);
+}
+.slider-btm{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 1111;
+}
+.slider-btm img{
+	width: 102%;
+	position: absolute;
+	bottom: 0;
+}
+.slider-btm img:last-child{
+	bottom: -25px;
+}
+
+
+
+/*   ABOUT SECTION   */
+.main-about-container{
+	margin-top: 80px;
+}
+.about-image{
+	padding-top: 78%;
+	border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.about-image-bg{
+	padding-top: 78%;
+    position: absolute;
+    left: -30px;
+    background: rgba(226, 170, 79, 0.5);;
+    width: 100%;
+    z-index: -1;
+    top: 30px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.main-about-container h2{
+	font-size: 45px;
+	display: inline-block;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.main-about-container h2 a{
+	color: #464646;
+	text-decoration: none;
+}
+.main-about-container h2:after{
+	content: '';
+	width: 120px;
+	position: absolute;
+	bottom: 0;
+	background: white;
+	height: 3px;
+	left: 0;
+}
+.main-about-container div.descr{
+	font-size: 14px;
+}
+.main-about-container .descr-container{
+	padding-left: 5%;
+	position: relative;
+    padding-bottom: 60px;
+}
+.main-about-container .btn-regular{
+	position: absolute;
+    bottom: 0;
+}
+.services{
+	margin-top: 50px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.services .service-item{
+	background: #fff;
+	width: 17%;
+	height: 230px;
+	border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.service-item .icon{
+	height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-item .icon img{
+	width: 26%;
+}
+.service-item .text{
+	padding: 0 50px;
+    text-align: center;
+}
+.service-item a:hover{
+	text-decoration: none;
+}
+.service-item a:hover div.text{
+	color: #e2aa4f;
+	transition: .5s;
+}
+.service-item a:hover img{
+	fill: #e2aa4f;
+	transition: .5s;
+}
+.services-button{
+	margin-top: 50px;
+}
+.main-line-1{
+	margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+/*  STOMATOLOGY  */
+.section-stomatology .heading h2 a{
+	font-size: 50px;
+}
+.section-stomatology .heading h2 a:hover{
+	color: #464646;
+	text-decoration: none;
+}
+.section-stomatology .heading .descr{
+	font-size: 14px;
+}
+.stomatology-slider{
+	margin-top: 120px;
+}
+.owl-carousel-1 .image{
+	padding-top: 60%;
+}
+.owl-carousel-1 .owl-nav{
+	text-align: right;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+	.container {
+	    max-width: 1140px;
+	}
+}
+
+
+@media (min-width: 1400px) {
+	.container {
+	    max-width: 80%;
+	}
+}
