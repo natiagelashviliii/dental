@@ -24,6 +24,14 @@ jQuery(document).ready(function($) {
 		$('.loader').remove();
 	});
 
+	var wow = new WOW(
+		{
+			boxClass:     'wow',      // default
+			offset:       100,          // default
+			mobile:       true,       // default
+			live:         true        // default
+		}
+	)
 	new WOW().init();
 
 	// Main Slider Start
