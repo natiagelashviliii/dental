@@ -270,7 +270,6 @@ header{
 .slider-container{
 	overflow: hidden;
 	position: relative;
-	min-height: 80vh;
 }
 .owl-carousel-main .item{
 	position: relative;
@@ -350,6 +349,7 @@ header{
 }
 .main-about-container{
 	margin-top: 80px;
+	padding-left: 45px;
 }
 .about-image{
 	padding-top: 78%;
@@ -1007,15 +1007,240 @@ header{
 /*  Service End  */
 
 
+.mobile-lang,
+.mobile-socials{
+	display: none;
+}
+.mobile-lang{
+	padding: 0 20px;
+	font-size: 12px;
+}
+.mobile-socials{
+	line-height: 35px!important;
+}
+
+@media (min-width: 768px) {
+	.container {
+	    max-width: 90%;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+	    max-width: 90%;
+	}
+}
+
 @media (min-width: 1200px) {
 	.container {
-	    max-width: 1140px;
+	    max-width: 90%;
+	}
+}
+
+@media (min-width: 1400px) {
+	.container {
+	    max-width: 85%;
+	}
+}
+
+@media (min-width: 1600px) {
+	.container {
+	    max-width: 80%;
 	}
 }
 
 
-@media (min-width: 1400px) {
-	.container {
-	    max-width: 80%;
+@media (max-width: 1400px) {
+	.lang a,
+	.sub-menu-item li > a,
+	.menu ul.main-menu > li > a{
+		font-size: 13px;
 	}
+	.menu ul.main-menu > li > a{
+		padding: 9px 16px;
+	}
+	.service-item .icon{
+		height: 130px;
+	}
+	.services .service-item{
+		height: 195px;
+	}
+	.main-line-1{
+		margin-top: 40px;
+	}
+	.slider-text{
+		top: 18%;
+	}
+}
+
+@media (max-width: 1290px) {
+	.lang a{
+		color: red;
+	}
+	.header-socials{
+		display: none;
+	}
+	.header-langs{
+		display: none;
+	}
+	.mobile-lang,
+	.mobile-socials{
+		display: block;
+	}
+	.menu{
+		padding-right: 0px;
+		max-width: 100%;
+	}
+	.menu ul>li:last-child a{
+		padding-right: 0;
+	}
+	.slider-text h2{
+		font-size: 35px;
+		margin-bottom: 20px;
+	}
+	.slider-text .text{
+		margin-top: 20px;
+	}
+	.slider-text .slider-btn {
+	    margin-top: 25px;
+	}
+	.slider-text .text{
+		font-size: 13px;
+		width: 450px;
+	}
+	.main-about-container h2{
+		font-size: 35px;
+		padding-bottom: 25px;
+    	margin-bottom: 25px;
+	}
+	.main-about-container div.descr{
+		font-size: 13px;
+	}
+	.section-service .heading h2 a {
+	    font-size: 40px;
+	}
+	.section-service .heading .descr {
+	    font-size: 13px;
+	}
+} 
+
+
+@media (max-width: 1200px) {
+	.lang a{
+		color: red;
+	}
+} 
+
+@media (max-width: 991px) {
+	.btn-regular{
+		font-size: 12px;
+	}
+	.header-menu-col{
+		display: none;
+	}
+	.slider-text .text{
+		display: none;
+	}
+	.slider-text h2 {
+	    font-size: 30px;
+	    margin-bottom: 18px;
+	}
+	.about-image-container{
+		display: none;
+	}
+	.main-about-container {
+	    margin-top: 50px;
+	    padding-left: 0;
+	}
+	.main-about-container .descr-container{
+		text-align: center;
+	}
+	.main-about-container h2:after{
+		left: 50%;
+    	transform: translateX(-50%);
+	}
+	.main-about-container .btn-regular{
+		left: 50%;
+    	transform: translateX(-50%);
+	}
+	.main-about-container h2{
+		font-size: 30px;
+	}
+	.main-about-container div.descr {
+	    font-size: 12px;
+	}
+	.section-service .heading h2 a{
+		font-size: 30px;
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	.section-service .heading .descr {
+	    font-size: 12px;
+	}
+	.services{
+		display: flex;
+	    flex-wrap: wrap;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: center;
+	}
+	.services .service-item{
+		display: flex;
+		flex-basis: 30%;
+		justify-content: space-around;
+		flex-direction: column;
+		margin-bottom: 15px;
+   		margin-left: 15px;
+	}
+	.services-button{
+		margin-top: 20px;
+	    left: 50%;
+	    position: absolute;
+	    transform: translateX(-50%);
+	}
+	.service-item-2{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.footer-contact-container.bottom {
+	    padding: 30px 0 20px;
+	}
+	.footer-head{
+		top: -38px;
+	}
+	.footer-contact img.contact{
+		width: 8%;
+	}
+	.header-menu-col-mobile{
+		height: 100px;
+	}
+	.header-menu-col-mobile .socials{
+		text-align: right;
+		height: 40px;
+		line-height: 35px;
+	}
+} 
+.slider-btm{
+	z-index: 30;
+}
+
+.burger-menu{
+	text-align: right;
+    float: right;
+}
+.header-menu-col-mobile{
+	z-index: 99;
+}
+.burger{
+	height: 60px;
+    text-align: right;
+    float: right;
+}
+.burger span{
+	display: block;
+    margin-top: 8px;
+    height: 3px;
+    width: 34px;
+    background: #fff;
+    border-radius: 5px;
 }

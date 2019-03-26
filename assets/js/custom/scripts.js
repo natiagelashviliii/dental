@@ -75,7 +75,14 @@ jQuery(document).ready(function($) {
 	    margin:0,
 	    nav:false,
 	    dots: true,
-	    items:4
+	    responsive:{
+	        0:{
+	            items: 3
+	        },
+	        991: {
+	        	items: 4
+	        }
+	    },
 	});
 
 	$('.owl-1 .owl-dots').addClass('container');
@@ -86,7 +93,14 @@ jQuery(document).ready(function($) {
 	    margin:0,
 	    nav:false,
 	    dots: true,
-	    items:4
+	    responsive:{
+	        0:{
+	            items: 3
+	        },
+	        991: {
+	        	items: 4
+	        }
+	    },
 	});
 
 	//services owl
