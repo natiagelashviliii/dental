@@ -1018,6 +1018,13 @@ header{
 .mobile-socials{
 	line-height: 35px!important;
 }
+.header-menu-col-mobile{
+	display: none;
+}
+.burger-menu-ul{
+	display: none;
+}
+
 
 @media (min-width: 768px) {
 	.container {
@@ -1213,11 +1220,15 @@ header{
 	}
 	.header-menu-col-mobile{
 		height: 100px;
+		display: block;
 	}
 	.header-menu-col-mobile .socials{
 		text-align: right;
 		height: 40px;
 		line-height: 35px;
+	}
+	.burger-menu-ul{
+		display: block;
 	}
 } 
 .slider-btm{
