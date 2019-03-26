@@ -5,6 +5,18 @@
 body{
 	background: #f6f6f6;
 }
+body.loading{
+	position: relative;
+}
+body.loading .loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	z-index: 99999;
+}
 a:hover{
 	text-decoration: none;
 	color: inherit;
@@ -69,6 +81,21 @@ a:hover{
 }
 .main-line img{
 	width: 100%;
+}
+@keyframes slideUp {
+	0% {
+	    -webkit-transform: translateY(20%);
+	    transform: translateY(20%);
+	    opacity: 0;
+	}
+	100% {
+	    -webkit-transform: translateY(0);
+	    transform: translateY(0);
+	    opacity: 1;
+	}
+}
+.slideUp{
+	animation: slideUp 1s ease forwards;
 }
 
 /*   HEADER START   */
@@ -243,6 +270,7 @@ header{
 .slider-container{
 	overflow: hidden;
 	position: relative;
+	min-height: 80vh;
 }
 .owl-carousel-main .item{
 	position: relative;
@@ -261,6 +289,7 @@ header{
 .slider-btm{
 	position: absolute;
 	bottom: 0;
+	left: -5px;
 	width: 100%;
 	z-index: 1111;
 }
@@ -272,7 +301,45 @@ header{
 .slider-btm img:last-child{
 	bottom: -25px;
 }
-
+.slider-loader{
+	position: absolute;
+    left: 0;
+    width: 5px;
+    bottom: 100%;
+    top: 0;
+    background: #e2aa4f;
+    z-index: 11;
+}
+@keyframes sliderAnimation {
+  0%   { bottom: 100%; }
+  100% { bottom: 0%; }
+}
+.slider-loader-animation{
+	animation: sliderAnimation 5s cubic-bezier(0, 0, 0.48, 1) forwards;
+}
+.slider-text{
+	position: absolute;
+    top: 25%;
+    left: 6%;
+	z-index: 11;
+}
+.slider-text h2{
+	font-size: 45px;
+	margin-bottom: 30px;
+}
+.slider-text .slider-line {
+	height: 3px;
+    background: white;
+    width: 120px;
+}
+.slider-text .text{
+	font-size: 14px;
+    max-width: 550px;
+    margin-top: 30px;
+}
+.slider-text .slider-btn{
+	margin-top: 30px;
+}
 
 
 /*   ABOUT SECTION   */
@@ -343,6 +410,7 @@ header{
 	height: 230px;
 	border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    opacity: 0;
 }
 .service-item .icon{
 	height: 150px;
@@ -364,10 +432,10 @@ header{
 }
 .service-item:hover{
 	transform: scale(1.028);
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
-    -moz-box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
-    box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
-	transition: 0.3s ease;
+	-webkit-box-shadow: 0px 0px 32px 0px rgba(152, 152, 152, 0.4);
+    -moz-box-shadow: 0px 0px 32px 0px rgba(152, 152, 152, 0.4);
+    box-shadow: 0px 0px 32px 0px rgba(152, 152, 152, 0.4);
+	transition: 0.5s ease;
 }
 .service-item a:hover{
 	text-decoration: none;
@@ -389,6 +457,7 @@ header{
     height: 230px;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    opacity: 0;
 }
 .service-item-2 a{
 	display: inline-flex;
@@ -398,11 +467,10 @@ header{
     height: 100%;
 }
 .service-item-2:hover{
-	transform: scale(1.018);
-	-webkit-box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
-    -moz-box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
-    box-shadow: 0px 0px 32px 0px rgba(207,207,207,0.4);
-	transition: 0.4s ease;
+	-webkit-box-shadow: 0px 0px 32px 0px rgba(152, 152, 152, 0.4);
+    -moz-box-shadow: 0px 0px 32px 0px rgba(152, 152, 152, 0.4);
+    box-shadow: 0px 0px 32px 0px rgba(152, 152, 152, 0.4);
+	transition: 0.5s ease;
 }
 .service-item-2 a:hover{
 	text-decoration: none;
@@ -435,6 +503,44 @@ header{
 	width: 80%;
 }
 
+
+.animated  {
+  -webkit-animation-duration : 1000 ms  ;
+  animation-duration : 1000 ms  ;
+  -webkit-animation-fill-mode : both  ;
+  animation-fill-mode : both  ;
+}  
+/* .owl-animated-out - only for current item */ 
+/* This is very important class. Use z-index if you want move Out item above In item */ 
+.owl-animated-out {
+  z-index : 1 
+   }
+/* .owl-animated-in - only for upcoming item
+/* This is very important class. Use z-index if you want move In item above Out item */ 
+.owl-animated-in {
+  z-index : 0 
+   }
+/* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */ 
+.fadeOut  {
+  -webkit-animation-name : fadeOut  ;
+  animation-name : fadeOut  ;
+}  
+@-webkit-keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }  
+  100% {
+    opacity : 0   ;
+  }  
+}
+@keyframes  fadeOut  {
+  0% {
+    opacity : 1   ;
+  }  
+  100% {
+    opacity : 0   ;
+  }  
+}
 
 
 
@@ -522,6 +628,17 @@ header{
 .owl-carousel-2 .owl-dots button.active{
 	background-color: rgba(226, 170, 75, 1);
 }
+.slider-zoom{
+	position: absolute;
+    top: 50%;
+    width: 5%!important;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-50deg) scale(0);
+}
+.item:hover .slider-zoom{
+	transform: translate(-50%, -50%) rotate(0deg) scale(1);
+	transition: 0.5s;
+}
 
 
 
@@ -568,9 +685,12 @@ footer{
 	font-size: 13px;
 	font-family: open-sans-regular;
 	color: white;
+	padding: 8px 0;
 }
 .footer-menu ul li a:hover{
 	text-decoration: none;
+	transition: .5s ease;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .footer-contact-container{
 	border-bottom: 1px solid rgba(255, 255, 255, .2);
@@ -617,7 +737,20 @@ footer{
 	width: 16px;
 }
 
-
+.lg-backdrop.in{
+	background: rgba(0, 0, 0, 0.7);
+}
+.lg-actions .lg-prev,
+.lg-actions .lg-next{
+	border: none;
+}
+.lg-thumb-outer.lg-grab{
+	background: #181818;
+}
+.lg-outer .lg-thumb-item.active, 
+.lg-outer .lg-thumb-item:hover {
+    border-color: #e2aa4f;
+}
 
 
 @media (min-width: 1200px) {

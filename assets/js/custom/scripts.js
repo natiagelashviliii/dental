@@ -19,17 +19,48 @@ easeScroll();
 
 jQuery(document).ready(function($) {
 
-	$('.owl-carousel-main').owlCarousel({
+	$('.loader').fadeOut('slow', function() {
+		$('body').removeClass('loading');
+		$('.loader').remove();
+	});
+
+	new WOW().init();
+
+	// Main Slider Start
+
+	var owl = $('.owl-carousel-main').owlCarousel({
 	    loop:true,
 	    margin:0,
 	    nav:false,
 	    dots: false,
+	    autoplay:true,
+    	autoplayTimeout:5000,
+    	autoplaySpeed:1500,
+    	animateIn: 'fadeIn',
+  		animateOut: 'fadeOut',
 	    responsive:{
 	        0:{
 	            items:1
 	        }
+	    },
+	    onChange: function() {
+	    	$('.slider-loader').removeClass('slider-loader-animation');
+	    	$('.slider-loader').css('bottom', '100%');
+	    },
+	    onChanged: function() {
+	    	setTimeout(function() {$('.slider-loader').addClass('slider-loader-animation');}, 100);
 	    }
 	});
+
+	owl.on('changed.owl.carousel', function(e) {
+        owl.trigger('stop.owl.autoplay');
+        owl.trigger('play.owl.autoplay');
+    });
+
+	// Main Slider End
+
+
+
 
 	$('.owl-carousel-1').owlCarousel({
 	    loop:true,
@@ -66,7 +97,6 @@ jQuery(document).ready(function($) {
 
     $('.owl-carousel-2 .item').on('click',function(){
       var a = $(this).attr('data-id');
-      console.log(a);
       $(this).closest('.cosmetology-slider').find('.animated-thumbnials').find('img[data-id="' + a + '"]').trigger('click');
     });
 
