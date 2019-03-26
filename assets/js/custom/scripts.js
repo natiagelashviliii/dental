@@ -53,4 +53,22 @@ jQuery(document).ready(function($) {
 	$('.owl-carousel-2 .owl-dots').addClass('container');
 
 
+	$('.animated-thumbnials').lightGallery({
+        thumbnail:true
+    }); 
+
+
+    $('.owl-carousel-1 .item').on('click',function(){
+      var a = $(this).attr('data-id');
+      console.log(a);
+      $(this).closest('.stomatology-slider').find('.animated-thumbnials').find('img[data-id="' + a + '"]').trigger('click');
+    });
+
+    $('.owl-carousel-2 .item').on('click',function(){
+      var a = $(this).attr('data-id');
+      console.log(a);
+      $(this).closest('.cosmetology-slider').find('.animated-thumbnials').find('img[data-id="' + a + '"]').trigger('click');
+    });
+
+
 });

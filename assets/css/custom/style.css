@@ -157,25 +157,33 @@ header{
 	color: #fff;
 	font-size: 14px;
 }
-.menu ul li {
+.menu ul.main-menu > li {
 	float: left;
 	list-style-type: none;
-	margin-right: 25px;
+	margin-right: 3px;
 }
 .menu{
 	float: right;
 }
-.menu ul{
+.menu ul.main-menu{
 	height: 60px;
     line-height: 60px;
     display: inline-block;
     float: right;
 }
-.menu ul li a {
+.menu ul.main-menu > li > a {
 	font-family: pantomtavruli;
 	color: #fff;
 	text-decoration: none;
 	font-size: 14px;
+	padding: 9px 18px;
+	border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.menu ul.main-menu > li > a:hover{
+	transition: 0.7s;
+	background: rgba(255, 255, 255, 0.2);
+	/*border-bottom: 1px solid rgba(255, 255, 255, 0.5);*/
 }
 .sub-menu{
 	position: relative;
@@ -187,8 +195,8 @@ header{
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    right: -6px;
-    top: 43%;
+    right: 13px;
+    top: 42%;
     width: 6px;
     height: 8px;
     transform: translateY(-50%);
@@ -198,7 +206,37 @@ header{
     -o-transform: rotate(90deg) translateY(-90%);
     transform: rotate(90deg) translateY(-90%);
 }
-
+.sub-menu:hover .sub-menu-item{
+	display: block;
+	transition: .5s;
+}
+.sub-menu-item{
+	display: none;
+	position: absolute;
+    top: 58px;
+    right: 50%;
+	background: #e2aa4f;
+    transform: translateX(50%);
+    border-bottom-right-radius: 40px;
+}
+.sub-menu-item li{
+	list-style-type: none;
+	margin-right: 3px;
+	padding: 0 15px;
+	white-space: nowrap;
+	height: 52px;
+    line-height: 52px;
+}
+.sub-menu-item li > a {
+	font-family: pantomtavruli;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 5px 18px;
+	border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-transform: uppercase;
+}
 
 
 /*   SLIDER START   */
@@ -394,6 +432,7 @@ header{
 .service-item-2 .text .descr{
 	font-size: 12px!important;
 	line-height: 16px;
+	width: 80%;
 }
 
 
@@ -438,6 +477,27 @@ header{
 }
 .owl-carousel-1 .owl-dots button.active{
 	background-color: rgba(226, 170, 75, 1);
+}
+.owl-carousel-1 .item{
+	position: relative;
+}
+.owl-carousel-1 .item .img-blur,
+.owl-carousel-2 .item .img-blur{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(24, 24, 24, 0.5);
+}
+.owl-carousel-1 .item:hover,
+.owl-carousel-2 .item:hover{
+	cursor: pointer;
+}
+.owl-carousel-1 .item:hover .img-blur,
+.owl-carousel-2 .item:hover .img-blur{
+	background: rgba(226, 170, 79, 0.4);
+	transition: 0.5s;
 }
 .cosmetology-slider{
 	margin-top: 120px;
@@ -522,7 +582,7 @@ footer{
 .footer-contact{
 	text-align: center;
 }
-.footer-contact img{
+.footer-contact img.contact{
 	width: 6%;
 	margin-bottom: 10px;
 }
@@ -540,8 +600,22 @@ footer{
 	font-size: 12px;
 	color: #fff;
 }
-
-
+.footer-contact{
+	display: inline-block;
+	width: 100%;
+}
+.footer-contact .socials{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.footer-contact .socials div{
+	display: inline-block;
+	margin: 0 6px;
+}
+.footer-contact .socials img{
+	width: 16px;
+}
 
 
 
