@@ -932,7 +932,7 @@ header{
 	    border-bottom-right-radius: 40px;
 	}
 	#map{
-		height: 21vw;
+		height: 27vw;
 		border-top-left-radius: 40px;
 	    border-bottom-right-radius: 40px;
 	}
@@ -998,6 +998,8 @@ header{
 	.service-menu li a{
 		color: #464646;
 		font-family: open-sans-regular;	
+		display: inline-block;
+		max-width: 170px;
 	}
 	.service-text{
 		font-size: 13px;
@@ -1280,12 +1282,36 @@ header{
 	.section-service .heading .descr {
 	    font-size: 13px;
 	}
+	.banner > .title{
+		font-size: 42px;
+	}
+	.container.about .about-bg{
+		bottom: 24%;
+	}
+	.container.about{
+		margin-bottom: 90px;
+	}
 } 
 
 
 @media (max-width: 1200px) {
 	.lang a{
 		color: red;
+	}
+	.banner-img{
+		padding-top: 19%;
+	}
+	.container.about{
+		margin-top: 70px;
+	}
+	.container.about .descr {
+	    font-size: 13px;
+	}
+	.container.about .title{
+		margin-bottom: 30px;
+	}
+	.map-container{
+		padding: 30px;
 	}
 } 
 
@@ -1384,6 +1410,37 @@ header{
 	.resp-menu{
 		display: block;
 	}
+	.banner > .title{
+		font-size: 38px;
+	}
+	.banner-img {
+	    padding-top: 21%;
+	}
+	.container.about {
+	    margin-top: 50px;
+	}
+	.container.contact .sub-text{
+		display: block;
+    	width: 100%;
+	}
+	.container.contact .text{
+		display: block;
+	}
+	.container.contact .contact-item {
+		text-align: center;
+		/*width: 32.9%;*/
+    	display: inline-block;
+	}
+	.contact-text-wrap{
+		width: 100%;
+		margin-bottom: 25px;
+		display: flex;
+    	align-items: center;
+    	justify-content: space-around;
+	}
+	#map{
+		height: 41vw;
+	}
 } 
 
 @media (max-width: 768px) {
@@ -1410,6 +1467,39 @@ header{
 	}
 	.footer-contact .target a{
 		font-size: 14px;
+	}
+	.about-gallery-item{
+		width: 50%;
+		padding: 0 5px;
+    	margin-bottom: 10px!important;
+	}
+	.banner-img {
+	    padding-top: 26%;
+	}
+	.doctors-item-container{
+		max-width: 50%;
+	}
+	.contact-text-wrap{
+		display: block;
+	}
+	.container.contact .contact-item{
+		width: 100%;
+	}
+	.map-container {
+	    padding: 23px;
+	}
+	.container.contact{
+		margin-bottom: 120px;
+	}
+	#map {
+	    height: 51vw;
+	}
+
+}
+
+@media (max-width: 640px){
+	.doctors-item-container{
+		max-width: 100%;
 	}
 }
 
@@ -1458,10 +1548,33 @@ header{
 	    height: 80px;
 	    margin-top: 10px;
 	}
+	.section-service {
+	    margin-top: 40px;
+	}
+	.heading h2,
+	.heading .descr{
+		text-align: center;
+	}
+	.container.about .about-bg {
+		top: 15px;
+    	left: 15px;
+    	right: 15px;
+	}
+	.container.about {
+	    padding: 45px 11% 40px;
+	}
+	.banner-img {
+	    padding-top: 31%;
+	}
 }
 
 @media (max-width: 459px){
 	.services .service-item {
 	    flex-basis: 54%;
+	}
+	.about-gallery-item{
+		width: 100%;
+		padding: 0;
+    	margin-bottom: 10px!important;
 	}
 }
