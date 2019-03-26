@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
 
 
 
-	$('.owl-carousel-1').owlCarousel({
+	$('.owl-1').owlCarousel({
 	    loop:true,
 	    margin:0,
 	    nav:false,
@@ -78,7 +78,7 @@ jQuery(document).ready(function($) {
 	    items:4
 	});
 
-	$('.owl-carousel-1 .owl-dots').addClass('container');
+	$('.owl-1 .owl-dots').addClass('container');
 
 
 	$('.owl-carousel-2').owlCarousel({
@@ -89,18 +89,39 @@ jQuery(document).ready(function($) {
 	    items:4
 	});
 
+	//services owl
+
 	$('.owl-carousel-2 .owl-dots').addClass('container');
+
+	$('.owl-service').owlCarousel({
+	    loop:true,
+	    margin: 15,
+	    nav:false,
+	    dots: true,
+	    items:3
+	});
 
 
 	$('.animated-thumbnials').lightGallery({
         thumbnail:true
     }); 
 
+    $('.animated-thumbnials-gallery').lightGallery({
+        thumbnail:true,
+        selector: '.gallery-image'
+    }); 
 
-    $('.owl-carousel-1 .item').on('click',function(){
+
+    $('.owl-1 .item').on('click',function(){
       var a = $(this).attr('data-id');
       console.log(a);
       $(this).closest('.stomatology-slider').find('.animated-thumbnials').find('img[data-id="' + a + '"]').trigger('click');
+    });
+
+    $('.owl-service .item').on('click',function(){
+      var a = $(this).attr('data-id');
+      console.log(a);
+      $(this).closest('.service-inner-slider').find('.animated-thumbnials').find('img[data-id="' + a + '"]').trigger('click');
     });
 
     $('.owl-carousel-2 .item').on('click',function(){

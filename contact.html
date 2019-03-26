@@ -111,7 +111,7 @@
 
 	<div class="banner">
 		<div class="banner-img" style="background: url('assets/img/slider.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-		<h1 class="title f-pant color-darkgray">Doctors</h1>
+		<h1 class="title f-pant color-darkgray">Contact</h1>
 		<div class="img-blur"></div>
 		<div class="slider-btm">
 			<div class="slider-btm-content">
@@ -123,63 +123,53 @@
 	</div>	
 
 	<main>
-		<div class="container doctors">
+		<div class="container contact">
 			<div class="row">
-				<div class="col-lg-4 wow slideUp">
-					<div class="doctor-item">
-						<div class="image" style="background: url('assets/img/doc1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-						<div class="text">
-							<div class="title f-open-sm">Tamuna Rogava</div>
-							<div class="position f-open-r">position</div>
+				<div class="col-lg-6 wow slideUp contact-text-container">
+					<div class="contact-text-wrap">
+						<div class="contact-item address">
+							<span class="icon">
+								<img src="assets/img/map-contact-text.svg">
+							</span>
+							<span class="sub-text">
+								Address:
+							</span>
+							<span class="text">
+								Tbilisi, Chavchavadze Ave #50
+							</span>
+						</div>
+						<div class="contact-item phone">
+							<span class="icon">
+								<img src="assets/img/phone-receiver-white.svg">
+							</span>
+							<span class="sub-text">
+								Phone:
+							</span>
+							<span class="text">
+								<a href="#">(+995) 597 795 104</a>
+							</span>
+						</div>
+						<div class="contact-item email">
+							<span class="icon">
+								<img src="assets/img/envelope-white.svg">
+							</span>
+							<span class="sub-text">
+								Phone:
+							</span>
+							<span class="text">
+								<a href="#">Dentaloffice@gmail.com</a>
+							</span>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 wow slideUp">
-					<div class="doctor-item">
-						<div class="image" style="background: url('assets/img/doc2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-						<div class="text">
-							<div class="title f-open-sm">Tamuna Rogava</div>
-							<div class="position f-open-r">position</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 wow slideUp">
-					<div class="doctor-item">
-						<div class="image" style="background: url('assets/img/doc3.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-						<div class="text">
-							<div class="title f-open-sm">Tamuna Rogava</div>
-							<div class="position f-open-r">position</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 wow slideUp">
-					<div class="doctor-item">
-						<div class="image" style="background: url('assets/img/doc3.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-						<div class="text">
-							<div class="title f-open-sm">Tamuna Rogava</div>
-							<div class="position f-open-r">position</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 wow slideUp">
-					<div class="doctor-item">
-						<div class="image" style="background: url('assets/img/doc1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-						<div class="text">
-							<div class="title f-open-sm">Tamuna Rogava</div>
-							<div class="position f-open-r">position</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 wow slideUp">
-					<div class="doctor-item">
-						<div class="image" style="background: url('assets/img/doc2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;"></div>
-						<div class="text">
-							<div class="title f-open-sm">Tamuna Rogava</div>
-							<div class="position f-open-r">position</div>
-						</div>
+
+				<div class="col-lg-6 wow slideUp">
+					<div class="map-container">
+						<div id="map"></div>
 					</div>
 				</div>
 			</div>
+			<div class="about-bg"></div>
 		</div>
 
 		<footer>
@@ -295,6 +285,18 @@
 	<script type="text/javascript" src="assets/js/plugins/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/wow.js"></script>
 	<script type="text/javascript" src="assets/js/custom/scripts.js"></script>
+
+	<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
 
 </body>
 </html>
