@@ -77,7 +77,10 @@ jQuery(document).ready(function($) {
 	    dots: true,
 	    responsive:{
 	        0:{
-	            items: 3
+	            items: 2
+	        },
+	        769: {
+	        	items: 3
 	        },
 	        991: {
 	        	items: 4
@@ -95,7 +98,10 @@ jQuery(document).ready(function($) {
 	    dots: true,
 	    responsive:{
 	        0:{
-	            items: 3
+	            items: 2
+	        },
+	        769: {
+	        	items: 3
 	        },
 	        991: {
 	        	items: 4
@@ -143,5 +149,18 @@ jQuery(document).ready(function($) {
       $(this).closest('.cosmetology-slider').find('.animated-thumbnials').find('img[data-id="' + a + '"]').trigger('click');
     });
 
+
+    $(".burger-bar").on("click",function(){
+        $(".burger-bar, .resp-menu").toggleClass("active");
+    });
+
+    $('.resp-menu .sub-menu').on('click', function(event) {
+    	event.preventDefault();
+    	$(this).find('.mobile-sub-menu').toggleClass('active');
+    });
+
+    $('#nav-icon3').click(function(){
+		$(this).toggleClass('open');
+	});
 
 });
