@@ -17,6 +17,8 @@ var easeScroll = function(){
 easeScroll();
 
 
+
+
 jQuery(document).ready(function($) {
 
 	$('.loader').fadeOut('slow', function() {
