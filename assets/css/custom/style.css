@@ -1592,6 +1592,9 @@ header{
 	.cosmetology-slider .owl-carousel .owl-nav button.owl-next{
 		margin-left: 10px;
 	}
+	.main-line-1 {
+	    margin-top: 25px;
+	}
 }
 
 @media (max-width: 640px){
