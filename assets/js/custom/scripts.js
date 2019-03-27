@@ -77,13 +77,20 @@ jQuery(document).ready(function($) {
 	    dots: true,
 	    responsive:{
 	        0:{
-	            items: 2
+	            items: 1,
+	            nav:true
+	        },
+	        419: {
+	        	items: 2,
+	        	nav:true
 	        },
 	        769: {
-	        	items: 3
+	        	items: 3,
+	        	nav:false
 	        },
 	        991: {
-	        	items: 4
+	        	items: 4,
+	        	nav:false
 	        }
 	    },
 	});
@@ -98,13 +105,20 @@ jQuery(document).ready(function($) {
 	    dots: true,
 	    responsive:{
 	        0:{
-	            items: 2
+	            items: 1,
+	            nav:true
+	        },
+	        419: {
+	        	items: 2,
+	        	nav:true
 	        },
 	        769: {
-	        	items: 3
+	        	items: 3,
+	        	nav:false
 	        },
 	        991: {
-	        	items: 4
+	        	items: 4,
+	        	nav:false
 	        }
 	    },
 	});
@@ -118,7 +132,24 @@ jQuery(document).ready(function($) {
 	    margin: 15,
 	    nav:false,
 	    dots: true,
-	    items:3
+	    responsive:{
+	        0:{
+	            items: 1,
+	            nav:true
+	        },
+	        419: {
+	        	items: 2,
+	        	nav:true
+	        },
+	        769: {
+	        	items: 3,
+	        	nav:false
+	        },
+	        991: {
+	        	items: 4,
+	        	nav:false
+	        }
+	    },
 	});
 
 
@@ -162,5 +193,11 @@ jQuery(document).ready(function($) {
     $('#nav-icon3').click(function(){
 		$(this).toggleClass('open');
 	});
+
+
+	$('.service-mobile-menu').on('click', function(event) {
+    	event.preventDefault();
+    	$(this).find('.sub-menu-titles').toggleClass('active');
+    });
 
 });

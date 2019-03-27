@@ -851,6 +851,7 @@ header{
 	}
 	.container.about .descr{
 		font-size: 14px;
+		text-align: center;
 	}
 	.container.about .gallery{
 		margin-top: 80px;
@@ -1170,6 +1171,9 @@ header{
   width: 0%;
   left: 50%;
 }
+.service-mobile-menu{
+	display: none;
+}
 
 
 
@@ -1231,6 +1235,9 @@ header{
 	.slider-text{
 		top: 18%;
 	}
+	.service-menu li a{
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 1290px) {
@@ -1290,6 +1297,59 @@ header{
 	}
 	.container.about{
 		margin-bottom: 90px;
+	}
+	.service-aside-menu{
+		display: none;
+	}
+	.service-main-text{
+		max-width: 100%;
+	}
+	.service-mobile-menu{
+		display: block;
+		padding: 25px 50px;
+	    background: white;
+	    margin-bottom: 20px;
+	    border-top-left-radius: 40px;
+	    border-bottom-right-radius: 40px;
+	}
+	.service-mobile-menu .title{
+		color: #e2aa4f;
+		position: relative;
+		padding-right: 10px;
+	}
+	.service-mobile-menu .title:after{
+		content: '';
+	    background: url(../../img/right-arrow-dark.svg);
+	    position: absolute;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+		right: 2px;
+    	top: 37%;
+	    width: 6px;
+	    height: 8px;
+	    transform: translateY(-50%);
+	    -webkit-transform: rotate(90deg) translateY(-90%);
+	    -moz-transform: rotate(90deg) translateY(-90%);
+	    -ms-transform: rotate(90deg) translateY(-90%);
+	    -o-transform: rotate(90deg) translateY(-90%);
+	    transform: rotate(90deg) translateY(-90%);
+	}
+	.service-mobile-menu .sub-menu-titles{
+		height: 0;
+    	overflow: hidden;
+	}
+	.sub-menu-titles.active{
+		height: auto;
+	}
+	.sub-menu-titles ul li a{
+		color: #464646;
+		font-size: 14px;
+	}
+	.sub-menu-titles ul li{
+		padding: 5px 0;
+	}
+	.sub-menu-titles ul{
+		padding-top: 10px;
 	}
 } 
 
@@ -1494,7 +1554,44 @@ header{
 	#map {
 	    height: 51vw;
 	}
-
+	.owl-carousel-1 .owl-dots,
+	.owl-carousel-2 .owl-dots{
+		display: none;
+	}
+	.owl-carousel-1 .owl-nav{
+		margin-top: 0;
+	}
+	.owl-carousel .owl-nav button.owl-next, 
+	.owl-carousel .owl-nav button.owl-prev, 
+	.owl-carousel button.owl-dot{
+		font-size: 20px;
+    	color: #e2aa4f;
+	}
+	.stomatology-slider .owl-nav{
+		padding: 0 30px;
+	}
+	.stomatology-slider .owl-carousel .owl-nav button.owl-next, 
+	.stomatology-slider .owl-carousel .owl-nav button.owl-prev, 
+	.stomatology-slider .owl-carousel button.owl-dot{
+		font-size: 25px;
+    	color: #e2aa4f;
+	}
+	.stomatology-slider .owl-carousel .owl-nav button.owl-next{
+		margin-left: 10px;
+	}
+	.cosmetology-slider .owl-nav{
+		padding: 0 30px;
+		text-align: left;
+	}
+	.cosmetology-slider .owl-carousel .owl-nav button.owl-next, 
+	.cosmetology-slider .owl-carousel .owl-nav button.owl-prev, 
+	.cosmetology-slider .owl-carousel button.owl-dot{
+		font-size: 25px;
+    	color: #e2aa4f;
+	}
+	.cosmetology-slider .owl-carousel .owl-nav button.owl-next{
+		margin-left: 10px;
+	}
 }
 
 @media (max-width: 640px){
@@ -1565,6 +1662,15 @@ header{
 	}
 	.banner-img {
 	    padding-top: 31%;
+	}
+	.container.service{
+		padding: 0 30px;
+	}
+	.service-content{
+		padding: 30px;
+	}
+	.service-mobile-menu{
+		padding: 25px 30px;
 	}
 }
 
